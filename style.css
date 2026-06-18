@@ -1,0 +1,136 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #f90b0b;
+    --accent-color: #000000;
+    --sidebar-bg: #f4f6f7;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #1f1f1f;
+    --accent-color: #000000;
+    --sidebar-bg: #1e1e1e;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.subtitulo {
+    margin: 10px 0 0 0;
+    font-size: 1.2em;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.btn-theme {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn-theme:hover {
+    opacity: 0.9;
+}
+
+.contenedor {
+    display: flex;
+    max-width: 900px;
+    margin: 30px auto;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+aside {
+    flex: 1;
+    background-color: var(--sidebar-bg);
+    padding: 25px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+aside h2 {
+    color: var(--accent-color);
+    font-size: 1.3em;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+}
+
+aside ul {
+    padding-left: 20px;
+}
+
+aside li {
+    margin-bottom: 10px;
+}
+
+main {
+    flex: 2;
+}
+
+main section {
+    margin-bottom: 30px;
+}
+
+main h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+[data-theme="dark"] main h2 {
+    color: var(--accent-color);
+    border-bottom-color: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    aside {
+        width: auto;
+    }
+}
+foto-cv {
+  width: 150px;       
+  height: 150px;      
+  object-fit: cover;  
+  border-radius: 50%; 
+  border: 3px solid #333px; 
+}
